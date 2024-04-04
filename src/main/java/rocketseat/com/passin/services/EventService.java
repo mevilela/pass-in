@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import rocketseat.com.passin.domain.attendee.Attendee;
 import rocketseat.com.passin.domain.event.Event;
+import rocketseat.com.passin.domain.event.exceptions.EventIsFullException;
 import rocketseat.com.passin.domain.event.exceptions.EventNotFoundException;
 import rocketseat.com.passin.dto.attendee.AttendeeIdDTO;
 import rocketseat.com.passin.dto.attendee.AttendeeRequestDTO;
@@ -51,7 +52,7 @@ public class EventService {
         Event event = this.getEventById(eventId);
         List<Attendee> attendeeList = this.attendeeService.getAllAttendeesFromEvents(eventId);
 
-        if(event.getMaximumAttendees() <= attendeeList.size()) throw new RuntimeException("event is full"); //criar new class event is full exception
+        if(event.getMaximumAttendees() <= attendeeList.size()) throw new EventIsFullException("event is full");
 
         Attendee newAttendee = new Attendee();
         newAttendee.setName(attendeeRequestDTO.name());

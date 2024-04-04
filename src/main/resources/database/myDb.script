@@ -29,7 +29,7 @@ SET FILES NIO TRUE
 SET FILES NIO SIZE 256
 SET FILES LOG TRUE
 SET FILES LOG SIZE 50
-SET FILES CHECK 5338
+SET FILES CHECK 6432
 SET DATABASE COLLATION "SQL_TEXT" PAD SPACE
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
@@ -58,8 +58,14 @@ INSERT INTO "flyway_schema_history" VALUES(1,'1','create-table-events','SQL','V1
 INSERT INTO "flyway_schema_history" VALUES(2,'2','create-table-attendees','SQL','V2__create-table-attendees.sql',556678982,'SA','2024-04-02 11:11:21.156568',1,'1')
 INSERT INTO "flyway_schema_history" VALUES(3,'3','create-table-checkins','SQL','V3__create-table-checkins.sql',-52053718,'SA','2024-04-02 11:11:21.163573',1,'1')
 INSERT INTO "flyway_schema_history" VALUES(4,'4','create-indexes','SQL','V4__create-indexes.sql',553901455,'SA','2024-04-02 11:11:21.170660',1,'1')
+INSERT INTO EVENTS VALUES('3958cbc1-fd56-4a6b-8242-25946c9b85e4','RS UNITED 2.0','Aprenda varias tecnologias de forma gratuita!!','rs-united-20',10)
 INSERT INTO EVENTS VALUES('4beb2299-037c-4471-9a98-60ea33ac3e79','RocketSeat NLW UNITE','Aprenda varias tecnologias de forma gratuita!!!','rocketseat-nlw-unite',1000)
 INSERT INTO EVENTS VALUES('a2fbc57a-2fad-41f1-9f5e-fd1283f018fb','RocketSeat WWW1','Aprenda java de forma gratuita!!!','rocketseat-www1',500)
+INSERT INTO EVENTS VALUES('b9d28fba-a731-41f2-92db-33ea498edc60','RS NLW UNITED 2.0','Aprenda varias tecnologias de forma gratuita!!','rs-nlw-united-20',1)
 INSERT INTO EVENTS VALUES('c346e97c-6125-4fb8-b47e-27e02f8a96e1','RocketSeat WWW','Aprenda java de forma gratuita!!!','rocketseat-www',500)
 INSERT INTO EVENTS VALUES('d39d6d5c-406c-4d4b-8e5c-de754f204d5f','RocketSeat NLW','Aprenda java de forma gratuita','rocketseat-nlw',500)
+INSERT INTO ATTENDEES VALUES('0098127c-464f-44ad-8d26-017d054b70b0','Fernanda Kipper','fernanda@kipper.com','4beb2299-037c-4471-9a98-60ea33ac3e79','2024-04-04 21:19:24.600440')
+INSERT INTO ATTENDEES VALUES('cef4d183-8c0d-433f-a283-2ab9e45e9757','Fernanda Kipper','fernanda@kipper.com','d39d6d5c-406c-4d4b-8e5c-de754f204d5f','2024-04-04 21:53:06.353696')
+INSERT INTO ATTENDEES VALUES('d2a74d7b-26c9-4a22-8802-06ebc1cdcc68','Fernanda Kipper','fernanda@kipper.com','b9d28fba-a731-41f2-92db-33ea498edc60','2024-04-04 21:54:35.809616')
 INSERT INTO ATTENDEES VALUES('d39d6d5c-406c-4d4b-8e5c-de754f204d5f','Fernanda Kipper','fernanda@gmail.com','d39d6d5c-406c-4d4b-8e5c-de754f204d5f',NULL)
+INSERT INTO ATTENDEES VALUES('db2fb803-f4ed-41ff-8b46-d4c2cff84f8e','Joao Kipper','joao@kipper.com','3958cbc1-fd56-4a6b-8242-25946c9b85e4','2024-04-04 22:34:49.500117')
